@@ -15,3 +15,15 @@ var expect = (a) => ({
   toBe:(b)=>{if(a!==b) throw new Error("Not Equal"); return true},
   notToBe:(b) => {if(a===b) throw new Error("Equal"); return true}
 });
+
+// 4-Counter II
+// https://leetcode.com/problems/counter-ii/
+
+var createCounter = function (init) {
+  const elementary = init
+  return {
+      increment: () => ++init,
+      decrement: () => --init,
+      reset: () => init = elementary,
+  }
+};
