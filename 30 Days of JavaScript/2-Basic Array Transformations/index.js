@@ -5,3 +5,14 @@ var map = function (arr, fn, i = 0, res = []) {
    res.push(fn(arr[i], i));
    return map(arr, fn, i + 1, res);
 };
+
+// 6-Filter Elements from Array
+// https://leetcode.com/problems/filter-elements-from-array/
+
+var filter = function (arr, fn) {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+     if (fn(arr[i], i)) res.push(arr[i]);
+  }
+  return res;
+};
