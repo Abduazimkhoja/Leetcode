@@ -16,3 +16,13 @@ var filter = function (arr, fn) {
   }
   return res;
 };
+
+// 7-Array Reduce Transformation
+// https://leetcode.com/problems/array-reduce-transformation/
+
+var reduce = function (nums, fn, init) {
+  for (let i = 0; i < nums.length; i++) {
+     init = fn(init, nums[i]);
+  }
+  return init;
+};
