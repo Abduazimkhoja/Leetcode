@@ -22,3 +22,25 @@ var once = function (fn, called = true) {
       }
    };
 };
+
+// 11 - Memoize
+// https://leetcode.com/problems/memoize/description/
+function memoize(doThing) {
+  const cache = new Map();
+  return (param1, param2 = 0) => { // Параметр по умолчанию для param2
+      // Проверка, что оба параметра являются числами
+      if (typeof param1 !== 'number' || typeof param2 !== 'number') {
+          throw new Error('Both parameters must be numbers');
+      }
+
+      const key = (param2 << 16) | param1;
+
+      if (cache.has(key)) {
+          return cache.get(key);
+      } else {
+          const result = doThing(param1, param2);
+          cache.set(key, result);
+          return result;
+      }
+  };
+};
