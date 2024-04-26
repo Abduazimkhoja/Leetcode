@@ -4,13 +4,13 @@
 
 ### Week-1
 
-[1. Create Hello World Function](https://leetcode.com/problems/create-hello-world-function/)
+1. [Create Hello World Function](https://leetcode.com/problems/create-hello-world-function/)
 
 ```javascript
 const createHelloWorld = () => () => 'Hello World';
 ```
 
-[2. Counter](https://leetcode.com/problems/counter/)
+2. [Counter](https://leetcode.com/problems/counter/)
 
 ```javascript
 const createCounter = (n) => {
@@ -19,7 +19,7 @@ const createCounter = (n) => {
 };
 ```
 
-[3. To Be Or Not To Be](https://leetcode.com/problems/to-be-or-not-to-be/)
+3. [To Be Or Not To Be](https://leetcode.com/problems/to-be-or-not-to-be/)
 
 ```javascript
 const expect = (a) => ({
@@ -34,7 +34,7 @@ const expect = (a) => ({
 });
 ```
 
-[4. Counter II](https://leetcode.com/problems/counter-ii/)
+4. [Counter II](https://leetcode.com/problems/counter-ii/)
 
 ```javascript
 const createCounter = (i) => {
@@ -42,6 +42,7 @@ const createCounter = (i) => {
    return () => c++;
 };
 ```
+---
 
 ### Week-2
 
@@ -67,6 +68,7 @@ const reduce = (nums, fn, init) => {
    return init;
 };
 ```
+---
 
 ### Week-3
 
