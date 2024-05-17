@@ -124,3 +124,12 @@ var addTwoPromises = async function (...rest) {
    }
 };
 ```
+
+[13. Sleep](https://leetcode.com/problems/sleep/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+```javascript
+async function sleep(millis) {
+   return await new Promise((r) => setTimeout(r, millis));
+}
+```
+
