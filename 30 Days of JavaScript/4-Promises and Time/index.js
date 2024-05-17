@@ -13,5 +13,24 @@ var addTwoPromises = async function (...rest) {
 // 13 - Sleep
 // https://leetcode.com/problems/sleep/?envType=study-plan-v2&envId=30-days-of-javascript
 async function sleep(millis) {
-  return await new Promise(r => setTimeout(r, millis)) 
+   return await new Promise((r) => setTimeout(r, millis));
 }
+
+// 14 - Timeout Cancellation
+// https://leetcode.com/problems/timeout-cancellation/description/?envType=study-plan-v2&envId=30-days-of-javascript
+
+var cancellable = function (fn, args, t) {
+   let timeoutId;
+
+   const executeFn = () => {
+      fn(...args);
+   };
+
+   timeoutId = setTimeout(executeFn, t);
+
+   const cancelFn = () => {
+      clearTimeout(timeoutId);
+   };
+
+   return cancelFn;
+};
