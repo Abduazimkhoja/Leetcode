@@ -133,3 +133,23 @@ async function sleep(millis) {
 }
 ```
 
+[14. Timeout Cancellation](https://leetcode.com/problems/timeout-cancellation/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+```javascript
+var cancellable = function (fn, args, t) {
+   let timeoutId;
+
+   const executeFn = () => {
+      fn(...args);
+   };
+
+   timeoutId = setTimeout(executeFn, t);
+
+   const cancelFn = () => {
+      clearTimeout(timeoutId);
+   };
+
+   return cancelFn;
+};
+
+```
