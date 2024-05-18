@@ -153,3 +153,22 @@ var cancellable = function (fn, args, t) {
 };
 
 ```
+
+[15. Interval Cancellation](https://leetcode.com/problems/interval-cancellation/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+```javascript
+var cancellable = function (fn, args, t) {
+   fn(...args);
+
+   const intervalId = setInterval(() => {
+      fn(...args);
+   }, t);
+
+   const cancelFn = () => {
+      clearInterval(intervalId);
+   };
+
+   return cancelFn;
+};
+
+```
