@@ -1,5 +1,5 @@
 // 12 - Add Two Promises
-// https://leetcode.com/problems/add-two-promises/description/?envType=study-plan-v2&envId=30-days-of-javascript
+// https://leetcode.com/problems/add-two-promises/
 var addTwoPromises = async function (...rest) {
    try {
       const res = await Promise.all(rest);
@@ -11,13 +11,13 @@ var addTwoPromises = async function (...rest) {
 };
 
 // 13 - Sleep
-// https://leetcode.com/problems/sleep/?envType=study-plan-v2&envId=30-days-of-javascript
+// https://leetcode.com/problems/sleep/
 async function sleep(millis) {
    return await new Promise((r) => setTimeout(r, millis));
 }
 
 // 14 - Timeout Cancellation
-// https://leetcode.com/problems/timeout-cancellation/description/?envType=study-plan-v2&envId=30-days-of-javascript
+// https://leetcode.com/problems/timeout-cancellation/
 
 var cancellable = function (fn, args, t) {
    let timeoutId;
@@ -36,7 +36,7 @@ var cancellable = function (fn, args, t) {
 };
 
 // 14 - Interval Cancellation
-// https://leetcode.com/problems/interval-cancellation/?envType=study-plan-v2&envId=30-days-of-javascript
+// https://leetcode.com/problems/interval-cancellation/
 
 var cancellable = function (fn, args, t) {
    fn(...args);
@@ -50,4 +50,23 @@ var cancellable = function (fn, args, t) {
    };
 
    return cancelFn;
+};
+
+// 15 - Promise Time Limit
+// https://leetcode.com/problems/promise-time-limit/
+
+var timeLimit = function (fn, t) {
+   return async function (...args) {
+      const timeoutPromise = new Promise((_, reject) => {
+         setTimeout(() => {
+            reject('Time Limit Exceeded');
+         }, t);
+      });
+
+      try {
+         return await Promise.race([fn(...args), timeoutPromise]);
+      } catch (error) {
+         throw error;
+      }
+   };
 };
