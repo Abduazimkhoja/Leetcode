@@ -72,19 +72,19 @@ const reduce = (nums, fn, init) => {
 
 ### Week-3
 
-[8. Function Composition](https://leetcode.com/problems/function-composition/description/)
+[8. Function Composition](https://leetcode.com/problems/function-composition/)
 
 ```javascript
 const compose = (fns) => (x) => fns.reverse().reduce((acc, fn) => fn(acc), x);
 ```
 
-[9. Return Length of Arguments Passed](https://leetcode.com/problems/return-length-of-arguments-passed/description/)
+[9. Return Length of Arguments Passed](https://leetcode.com/problems/return-length-of-arguments-passed/)
 
 ```javascript
 const argumentsLength = (...a) => a.length;
 ```
 
-[10. Allow One Function Call](https://leetcode.com/problems/allow-one-function-call/description/)
+[10. Allow One Function Call](https://leetcode.com/problems/allow-one-function-call/)
 
 ```javascript
 const once =
@@ -93,7 +93,7 @@ const once =
       called ? ((called = false), fn(...args)) : undefined;
 ```
 
-[11. Memoize](https://leetcode.com/problems/memoize/description/)
+[11. Memoize](https://leetcode.com/problems/memoize/)
 
 ```javascript
 const memoize = (doThing) => {
@@ -111,7 +111,7 @@ const memoize = (doThing) => {
 
 ### Week-4
 
-[12. Add Two Promises](https://leetcode.com/problems/add-two-promises/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+[12. Add Two Promises](https://leetcode.com/problems/add-two-promises/)
 
 ```javascript
 var addTwoPromises = async function (...rest) {
@@ -125,7 +125,7 @@ var addTwoPromises = async function (...rest) {
 };
 ```
 
-[13. Sleep](https://leetcode.com/problems/sleep/?envType=study-plan-v2&envId=30-days-of-javascript)
+[13. Sleep](https://leetcode.com/problems/sleep/)
 
 ```javascript
 async function sleep(millis) {
@@ -133,7 +133,7 @@ async function sleep(millis) {
 }
 ```
 
-[14. Timeout Cancellation](https://leetcode.com/problems/timeout-cancellation/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+[14. Timeout Cancellation](https://leetcode.com/problems/timeout-cancellation/)
 
 ```javascript
 var cancellable = function (fn, args, t) {
@@ -154,7 +154,7 @@ var cancellable = function (fn, args, t) {
 
 ```
 
-[15. Interval Cancellation](https://leetcode.com/problems/interval-cancellation/?envType=study-plan-v2&envId=30-days-of-javascript)
+[15. Interval Cancellation](https://leetcode.com/problems/interval-cancellation/)
 
 ```javascript
 var cancellable = function (fn, args, t) {
