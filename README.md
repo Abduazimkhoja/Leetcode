@@ -172,3 +172,24 @@ var cancellable = function (fn, args, t) {
 };
 
 ```
+
+[16. Promise Time Limit](https://leetcode.com/problems/promise-time-limit/)
+
+```javascript
+var timeLimit = function (fn, t) {
+   return async function (...args) {
+      const timeoutPromise = new Promise((_, reject) => {
+         setTimeout(() => {
+            reject('Time Limit Exceeded');
+         }, t);
+      });
+
+      try {
+         return await Promise.race([fn(...args), timeoutPromise]);
+      } catch (error) {
+         throw error;
+      }
+   };
+};
+
+```
