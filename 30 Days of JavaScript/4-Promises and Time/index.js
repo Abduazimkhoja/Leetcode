@@ -35,7 +35,7 @@ var cancellable = function (fn, args, t) {
    return cancelFn;
 };
 
-// 14 - Interval Cancellation
+// 15 - Interval Cancellation
 // https://leetcode.com/problems/interval-cancellation/
 
 var cancellable = function (fn, args, t) {
@@ -52,7 +52,7 @@ var cancellable = function (fn, args, t) {
    return cancelFn;
 };
 
-// 15 - Promise Time Limit
+// 16 - Promise Time Limit
 // https://leetcode.com/problems/promise-time-limit/
 
 var timeLimit = function (fn, t) {
